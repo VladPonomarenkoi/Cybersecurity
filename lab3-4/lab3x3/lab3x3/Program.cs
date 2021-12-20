@@ -1,49 +1,45 @@
 ﻿using System;
-using System.Text;
 using System.Security.Cryptography;
+using System.Text;
 
-namespace _3part
+namespace lab3x3
 {
     class Program
     {
-        public static byte[] ComputeHmacsha1(byte[] toBeHashed, byte[] key)
+        static byte[] ComputeHashSHA256(byte[] DataForHash)
         {
-            using (var hmac = new HMACSHA1(key))
+            using (var sha256 = SHA256.Create())
             {
-                return hmac.ComputeHash(toBeHashed);
+                return sha256.ComputeHash(DataForHash);
             }
         }
-        public static void CheckIfConfident(string GettedMessage, string key, string GettedHash)
+        public static byte[] ComputeHmacsha256(byte[] ToBeHashed, byte[] key)
         {
-            Console.WriteLine("Обчислення та порiвняння хешування");
-            var tempComputedHash = ComputeHmacsha1(Encoding.Unicode.GetBytes(GettedMessage), Encoding.Unicode.GetBytes(key));
-            if (GettedHash == Convert.ToBase64String(tempComputedHash))
+            using (var hmac = new HMACSHA256(key))
             {
-                Console.WriteLine("Обчислений хеш той самий, що й отриманий");
-                Console.WriteLine("Авторизовано");
+                return hmac.ComputeHash(ToBeHashed);
+            }
+        }
+        static void Main(string[] args)
+        {
+            string key = "Vladpon";
+            string message = "love is a feeling";
+            var Key = ComputeHashSHA256(Encoding.Unicode.GetBytes(key));
+            var Mess = ComputeHmacsha256(Encoding.Unicode.GetBytes(message), Key);
+            Console.WriteLine($"Сообщение: {message}");
+            Console.WriteLine($"Хешированное сообщение: {Convert.ToBase64String(Mess)}");
+            Console.WriteLine("Отправка сообщения получателю....");
+            string key2 = "Vladpon";
+            var Key2 = ComputeHashSHA256(Encoding.Unicode.GetBytes(key2));
+            var Mess2 = ComputeHmacsha256(Encoding.Unicode.GetBytes(message), Key2);
+            if (Convert.ToBase64String(Mess) == Convert.ToBase64String(Mess2))
+            {
+                Console.WriteLine("Сообщение верное!");
             }
             else
             {
-                Console.WriteLine("Обчислений хеш НЕ той самий, що отриманий");
-                Console.WriteLine("НЕ Авторизовано");
+                Console.WriteLine("Сообщение не верное!");
             }
-        }
-
-        static void Main(string[] args)
-        {
-            const string strForHash = "Hello World!";
-            const string IncorectStrForHash = "Buy World!";
-            const string keyForHash = "secret";
-            const string HashWeGet = "+wS72Kx9qyWwG1LhKL4rDbgbNqc=";
-
-            var sha1ForStr = ComputeHmacsha1(Encoding.Unicode.GetBytes(strForHash), Encoding.Unicode.GetBytes(keyForHash));
-            Console.WriteLine($"Hash sha1:{Convert.ToBase64String(sha1ForStr)}");
-            Console.WriteLine("-------------------");
-            CheckIfConfident(strForHash, keyForHash, HashWeGet);
-            Console.WriteLine("-------------------");
-            CheckIfConfident(IncorectStrForHash, keyForHash, HashWeGet);
-
-
         }
     }
 }

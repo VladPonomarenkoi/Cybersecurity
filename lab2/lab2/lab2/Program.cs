@@ -6,7 +6,7 @@ using System.Text;
 
 namespace lab2
 {
-    class Program
+    class Vlad
     {
         static void Main(string[] args)
         {

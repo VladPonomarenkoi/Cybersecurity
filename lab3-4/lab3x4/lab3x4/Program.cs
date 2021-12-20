@@ -1,83 +1,48 @@
 ﻿using System;
-using System.Text;
 using System.Security.Cryptography;
-using System.Collections.Generic;
+using System.Text;
 
-namespace lab3х4
+namespace lab3x4
 {
     class Program
     {
-        public static byte[] ComputeHashSha256(byte[] toBeHashed)
+        static byte[] ComputeHashSHA256(byte[] DataForHash)
         {
             using (var sha256 = SHA256.Create())
             {
-                return sha256.ComputeHash(toBeHashed);
+                return sha256.ComputeHash(DataForHash);
             }
         }
         static void Main(string[] args)
         {
-            List<string> logins = new List<string>();
-            List<string> passwords = new List<string>();
+            Console.WriteLine("Для регистрации введите логин и пароль.");
+            Console.WriteLine("Введите логин: ");
 
-            while (true)
+            string Login = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Введите пароль: ");
+
+            string Password = Convert.ToBase64String(ComputeHashSHA256(Encoding.Unicode.GetBytes(Convert.ToString(Console.ReadLine()))));
+            Console.WriteLine("Регистрация завершена!");
+            Console.WriteLine("Для входа введите свои учетные данные:");
+            Console.WriteLine("Введите логин: ");
+
+            string EnteredLogin = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Введите пароль: ");
+
+            string EnteredPassword = Convert.ToBase64String(ComputeHashSHA256(Encoding.Unicode.GetBytes(Convert.ToString(Console.ReadLine()))));
+            if (Login != EnteredLogin)
             {
-
-                Console.Write("Enter '1' to logIN and '0' to logUP: ");
-                var temp = Console.ReadLine();
-                if (temp == "1")
-                {
-                    Console.Write("Будь ласка, введiть свiй логiн: ");
-                    var login = Console.ReadLine();
-                    var sha256ForStr1 = Convert.ToBase64String(ComputeHashSha256(Encoding.Unicode.GetBytes(login)));
-                    if (logins.Contains(sha256ForStr1))
-                    {
-                        var ind = logins.IndexOf(sha256ForStr1);
-                        Console.Write("Будь ласка, введiть свiй пароль: ");
-                        var pass = Console.ReadLine();
-                        var sha256Forpass = Convert.ToBase64String(ComputeHashSha256(Encoding.Unicode.GetBytes(pass)));
-                        if (passwords[ind] == sha256Forpass)
-                        {
-                            Console.WriteLine("Ви увiйшли");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Неправильний пароль");
-                        }
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("Неправильний логiн");
-                    }
-
-
-
-                }
-                else if (temp == "0")
-                {
-                    Console.Write("Будь ласка, введiть свiй логiн: ");
-                    var login = Console.ReadLine();
-                    var sha256ForStr1 = Convert.ToBase64String(ComputeHashSha256(Encoding.Unicode.GetBytes(login)));
-                    if (!logins.Contains(sha256ForStr1))
-                    {
-                        logins.Add(sha256ForStr1);
-                        Console.Write("Будь ласка, введiть свiй пароль: ");
-                        var pass = Console.ReadLine();
-                        var sha256Forpass = Convert.ToBase64String(ComputeHashSha256(Encoding.Unicode.GetBytes(pass)));
-                        passwords.Add(sha256Forpass);
-                        Console.WriteLine("Ви зареєструвалися");
-                    }
-                    else
-                    {
-                        Console.WriteLine("логiн вже в базi");
-                        continue;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Введiть правильно, будь ласка");
-                }
+                Console.WriteLine("Введен неверный логин!");
             }
+            else if (Password != EnteredPassword)
+            {
+                Console.WriteLine("Введен неверный пароль!");
+            }
+            else
+            {
+                Console.WriteLine("Авторизация завершена!");
+            }
+
         }
     }
 }

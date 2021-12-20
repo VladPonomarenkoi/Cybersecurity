@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x3\\lab3x3\\lab3x3.csproj",
+      "projectUniqueName": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x3\\lab3x3\\lab3x3.csproj",
       "projectName": "lab3x3",
-      "projectPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x3\\lab3x3\\lab3x3.csproj",
+      "projectPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x3\\lab3x3\\lab3x3.csproj",
       "packagesPath": "C:\\Users\\gggrr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x3\\lab3x3\\obj\\",
+      "outputPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x3\\lab3x3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gggrr\\AppData\\Roaming\\NuGet\\NuGet.Config",

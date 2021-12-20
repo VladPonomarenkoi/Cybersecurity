@@ -30,3 +30,19 @@ C:\Users\gggrr\OneDrive\Рабочий стол\Новая папка (3)\lab3-4
 C:\Users\gggrr\OneDrive\Рабочий стол\Новая папка (3)\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\ref\lab3x4.dll
 C:\Users\gggrr\OneDrive\Рабочий стол\Новая папка (3)\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.pdb
 C:\Users\gggrr\OneDrive\Рабочий стол\Новая папка (3)\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.genruntimeconfig.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\bin\Debug\net6.0\lab3x4.exe
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\bin\Debug\net6.0\lab3x4.deps.json
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\bin\Debug\net6.0\lab3x4.runtimeconfig.json
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\bin\Debug\net6.0\lab3x4.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\bin\Debug\net6.0\ref\lab3x4.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\bin\Debug\net6.0\lab3x4.pdb
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.GlobalUsings.g.cs
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.csproj.AssemblyReference.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.AssemblyInfoInputs.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.AssemblyInfo.cs
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.csproj.CoreCompileInputs.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\ref\lab3x4.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.pdb
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab3-4\lab3x4\lab3x4\obj\Debug\net6.0\lab3x4.genruntimeconfig.cache

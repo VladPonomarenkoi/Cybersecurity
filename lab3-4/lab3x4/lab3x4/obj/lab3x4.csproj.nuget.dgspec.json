@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj": {}
+    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj": {
+    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj",
+        "projectUniqueName": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj",
         "projectName": "lab3x4",
-        "projectPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj",
+        "projectPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x4\\lab3x4\\lab3x4.csproj",
         "packagesPath": "C:\\Users\\gggrr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Новая папка (3)\\lab3-4\\lab3x4\\lab3x4\\obj\\",
+        "outputPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab3-4\\lab3x4\\lab3x4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gggrr\\AppData\\Roaming\\NuGet\\NuGet.Config",

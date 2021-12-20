@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 namespace lab1
 {
-    class Program
+    class Vlad
     {
         static void Main(string[] args)
         {

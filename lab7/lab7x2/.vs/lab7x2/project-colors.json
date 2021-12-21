@@ -5,6 +5,11 @@
       "ProjectGuid": "11e11a02-9b9e-448d-ac9c-e64a8238739d",
       "DisplayName": "lab7x2",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

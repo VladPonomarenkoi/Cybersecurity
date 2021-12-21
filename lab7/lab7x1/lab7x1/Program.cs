@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Text;
 
-namespace Lab7._1
+namespace Lab7x1
 {
     public class RSAWithRSAParameterKey
     {

@@ -1,0 +1,16 @@
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\bin\Debug\net6.0\lab9-10.exe
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\bin\Debug\net6.0\lab9-10.deps.json
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\bin\Debug\net6.0\lab9-10.runtimeconfig.json
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\bin\Debug\net6.0\lab9-10.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\bin\Debug\net6.0\ref\lab9-10.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\bin\Debug\net6.0\lab9-10.pdb
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.GlobalUsings.g.cs
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.csproj.AssemblyReference.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.AssemblyInfoInputs.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.AssemblyInfo.cs
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.csproj.CoreCompileInputs.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\ref\lab9-10.dll
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.pdb
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab9-10\lab9-10\obj\Debug\net6.0\lab9-10.genruntimeconfig.cache

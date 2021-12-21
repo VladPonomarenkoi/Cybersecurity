@@ -17,7 +17,6 @@ namespace lab7_2
                 File.WriteAllText(privateKey, rsa.ToXmlString(true));
             }
         }
-
         public byte[] EncryptData(byte[] dataToEncrypt, string publicKey = "Public.xml")
         {
             byte[] cb;
@@ -29,24 +28,24 @@ namespace lab7_2
             }
             return cb;
         }
-        public byte[] DecryptData(byte[] dataToEncrypt, string privateKey = "Private.xml")
+        public byte[] DecryptData(byte[] dataToDecrypt, string privateKey = "Private.xml")
         {
             byte[] p;
             using (var rsa = new RSACryptoServiceProvider(2048))
             {
                 rsa.PersistKeyInCsp = false;
                 rsa.FromXmlString(File.ReadAllText(privateKey));
-                p = rsa.Decrypt(dataToEncrypt, false);
+                p = rsa.Decrypt(dataToDecrypt, false);
             }
             return p;
         }
         static void Main(string[] args)
         {
-            var rsaParams = new Program();
+            var rsap = new Program();
             const string original = "Hey";
-            rsaParams.AssignNewKey();
-            var enc = rsaParams.EncryptData(Encoding.UTF8.GetBytes(original));
-            var dec = rsaParams.DecryptData(enc);
+            rsap.AssignNewKey();
+            var enc = rsap.EncryptData(Encoding.UTF8.GetBytes(original));
+            var dec = rsap.DecryptData(enc);
 
             Console.WriteLine(" Original Text = " + original);
 

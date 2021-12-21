@@ -1,0 +1,6 @@
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab13-14\lab13x14\lab13x14\obj\Debug\net6.0\lab13x14.GlobalUsings.g.cs
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab13-14\lab13x14\lab13x14\obj\Debug\net6.0\lab13x14.csproj.AssemblyReference.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab13-14\lab13x14\lab13x14\obj\Debug\net6.0\lab13x14.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab13-14\lab13x14\lab13x14\obj\Debug\net6.0\lab13x14.AssemblyInfoInputs.cache
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab13-14\lab13x14\lab13x14\obj\Debug\net6.0\lab13x14.AssemblyInfo.cs
+C:\Users\gggrr\OneDrive\Рабочий стол\Cybersecurity\lab13-14\lab13x14\lab13x14\obj\Debug\net6.0\lab13x14.csproj.CoreCompileInputs.cache

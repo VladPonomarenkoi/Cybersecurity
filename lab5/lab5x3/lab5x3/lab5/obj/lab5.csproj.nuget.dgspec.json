@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5\\lab5.csproj": {}
+    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5x3\\lab5x3\\lab5\\lab5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5\\lab5.csproj": {
+    "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5x3\\lab5x3\\lab5\\lab5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5\\lab5.csproj",
+        "projectUniqueName": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5x3\\lab5x3\\lab5\\lab5.csproj",
         "projectName": "lab5",
-        "projectPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5\\lab5.csproj",
+        "projectPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5x3\\lab5x3\\lab5\\lab5.csproj",
         "packagesPath": "C:\\Users\\gggrr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5\\obj\\",
+        "outputPath": "C:\\Users\\gggrr\\OneDrive\\Рабочий стол\\Cybersecurity\\lab5\\lab5x3\\lab5x3\\lab5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gggrr\\AppData\\Roaming\\NuGet\\NuGet.Config",

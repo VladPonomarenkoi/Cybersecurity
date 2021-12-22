@@ -7,7 +7,7 @@ namespace lab8
 {
     class Program
     {
-        private readonly static string CspContainerName = "Rsa";
+        private readonly static string CspContainerName = "RsaContainer";
         public static void GenerateKeys(string publicKeyPath)
         {
             CspParameters cspParameters = new CspParameters(1)

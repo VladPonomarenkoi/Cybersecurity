@@ -28,7 +28,6 @@ namespace lab3x3
             var Mess = ComputeHmacsha256(Encoding.Unicode.GetBytes(message), Key);
             Console.WriteLine($"Сообщение: {message}");
             Console.WriteLine($"Хешированное сообщение: {Convert.ToBase64String(Mess)}");
-            Console.WriteLine("Отправка сообщения получателю....");
             string key2 = "Vladpon";
             var Key2 = ComputeHashSHA256(Encoding.Unicode.GetBytes(key2));
             var Mess2 = ComputeHmacsha256(Encoding.Unicode.GetBytes(message), Key2);

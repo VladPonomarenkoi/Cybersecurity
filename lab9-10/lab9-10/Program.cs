@@ -3,84 +3,84 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace lab9x10
+namespace lab9
 {
     class Program
     {
-        public static byte[] ComputeHashSha512(byte[] toBeHashed)
-        {
-            using (var sha512 = SHA512.Create())
-            {
-                return sha512.ComputeHash(toBeHashed);
-            }
-        }
 
-        private readonly static string CspContainerName = "RsaKeyContainer";
-        public void AssignNewKey()
+        private readonly static string CspContainerName = "RsaContainer";
+
+        public static void AssignNewKey(string publicKeyPath)
         {
-            CspParameters cspParameters = new CspParameters(1)
+            CspParameters cspParams = new CspParameters(1)
             {
                 KeyContainerName = CspContainerName,
-
                 ProviderName = "Microsoft Strong Cryptographic Provider"
             };
-            var rsa = new RSACryptoServiceProvider(cspParameters)
+
+            var rsa = new RSACryptoServiceProvider(cspParams)
             {
                 PersistKeyInCsp = true
             };
-            File.WriteAllText("Ponomarenko.xml", rsa.ToXmlString(false));
+            File.WriteAllText(publicKeyPath, rsa.ToXmlString(false));
         }
 
-        public byte[] SignData(byte[] hashOfDataToSign)
+        public static byte[] SignData(byte[] dataToSign)
         {
-
             var cspParams = new CspParameters
             {
-                KeyContainerName = CspContainerName,
+                KeyContainerName = CspContainerName
             };
 
-            using (var rsa = new RSACryptoServiceProvider(2048, cspParams))
+            using (var rsa = new RSACryptoServiceProvider(cspParams))
             {
                 rsa.PersistKeyInCsp = true;
                 var rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);
-                rsaFormatter.SetHashAlgorithm("SHA512");
-                return rsaFormatter.CreateSignature(hashOfDataToSign);
+                rsaFormatter.SetHashAlgorithm(nameof(SHA512));
+
+                byte[] hashData;
+                using (var sha512 = SHA512.Create())
+                {
+                    hashData = sha512.ComputeHash(dataToSign);
+                }
+                return rsaFormatter.CreateSignature(hashData);
             }
         }
-        public bool VerifySignature(byte[] hashOfDataToSign, byte[] signature)
+
+        public static bool Verify(string publicKeyPath, byte[] data, byte[] signature)
         {
-            using (var rsa = new RSACryptoServiceProvider(2048))
+            using (var rsa = new RSACryptoServiceProvider())
             {
                 rsa.PersistKeyInCsp = false;
-                rsa.FromXmlString(File.ReadAllText("Ponomarenko.xml"));
+                rsa.FromXmlString(File.ReadAllText(publicKeyPath));
+
                 var rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);
-                rsaDeformatter.SetHashAlgorithm("SHA512");
-                return rsaDeformatter.VerifySignature(hashOfDataToSign, signature);
+                rsaDeformatter.SetHashAlgorithm(nameof(SHA512));
+                byte[] hashData;
+                using (var sha512 = SHA512.Create())
+                {
+                    hashData = sha512.ComputeHash(data);
+                }
+                return rsaDeformatter.VerifySignature(hashData, signature);
             }
         }
+
+
 
         static void Main(string[] args)
         {
-            var doc = Encoding.UTF8.GetBytes("Signed by Vlad Ponomarenko");
-            byte[] hashedDocument = ComputeHashSha512(doc);
-            var digitalSignature = new Program();
-            digitalSignature.AssignNewKey();
-            var signature = digitalSignature.SignData(hashedDocument);
-            var verified = digitalSignature.VerifySignature(hashedDocument, signature);
+            string publicKeyPath = "Ponomarenko.xml";
+            string data = "Signed by Vlad Ponomarenko";
+            Console.WriteLine(data);
+            byte[] byteData = Encoding.UTF8.GetBytes(data);
 
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine("Digital Signature Demonstration in .NET");
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine(" Original Text = " + Encoding.Default.GetString(doc));
-            Console.WriteLine();
-            Console.WriteLine(" Digital Signature = " + Convert.ToBase64String(signature));
-            Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine(verified
-            ? "Electronic digital signature correct!"
-            : "Electronic digital signature is not known!");
-            Console.WriteLine("--------------------------------------------------");
-            Console.ReadLine();
+            AssignNewKey(publicKeyPath);
+
+            var signedbyteData = SignData(byteData);
+            var verSignedByteData = Verify(publicKeyPath, byteData, signedbyteData);
+            Console.WriteLine(" Digital Signature = " + Convert.ToBase64String(signedbyteData));
+            Console.WriteLine(verSignedByteData ? "Document is verified" : "Document is not verified");
+
         }
-
     }
 }

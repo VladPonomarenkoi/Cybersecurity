@@ -49,11 +49,9 @@ namespace Lab7x1
             const string original = "Vlad Hi";
             rsaParams.AssignNewKey();
             Console.WriteLine(" Original Text = " + original);
-            Console.WriteLine();
             var encrypted = rsaParams.EncryptData(Encoding.UTF8.GetBytes(original));
             var decrypted = rsaParams.DecryptData(encrypted);
             Console.WriteLine(" Encrypted Text = " + Convert.ToBase64String(encrypted));
-            Console.WriteLine();
             Console.WriteLine(" Decrypted Text = " + Encoding.Default.GetString(decrypted));
         }
     }

@@ -2,52 +2,40 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace lab5x3
+namespace Exam
 {
-    public class SaltedHash
+    public class PBKDF2
     {
         public static byte[] GenerateSalt()
         {
             const int saltLength = 32;
-            using (var randomNumberGenerator = new RNGCryptoServiceProvider())
+            using (var randomNumberGenerator =
+            new RNGCryptoServiceProvider())
             {
                 var randomNumber = new byte[saltLength];
                 randomNumberGenerator.GetBytes(randomNumber);
                 return randomNumber;
             }
         }
-
-        private static byte[] Combine(byte[] first, byte[] second)
+        public static byte[] HashPassword(byte[] toBeHashed, byte[] salt)
         {
-            var ret = new byte[first.Length + second.Length];
-            Buffer.BlockCopy(first, 0, ret, 0, first.Length);
-            Buffer.BlockCopy(second, 0, ret, first.Length, second.Length);
-            return ret;
-        }
-
-        public static byte[] HashPasswordWithSalt(byte[] toBeHashed, byte[] salt)
-        {
-            using (var sha256 = SHA256.Create())
+            using (var rfc2898 = new Rfc2898DeriveBytes(
+            toBeHashed, salt, 19000))
             {
-                return sha256.ComputeHash(Combine(toBeHashed, salt));
+                return rfc2898.GetBytes(64);
             }
         }
     }
-
-
-
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Enter password");
             string password = Console.ReadLine();
-            byte[] salt = SaltedHash.GenerateSalt();
+            var hashedPassword = PBKDF2.HashPassword(Encoding.UTF8.GetBytes(password), PBKDF2.GenerateSalt());
             Console.WriteLine("Password: " + password);
-            Console.WriteLine("Salt: " + Convert.ToBase64String(salt));
-
-            var hashedPassword = SaltedHash.HashPasswordWithSalt(Encoding.UTF8.GetBytes(password), salt);
             Console.WriteLine("Hashed Password: " + Convert.ToBase64String(hashedPassword));
+
         }
     }
 }

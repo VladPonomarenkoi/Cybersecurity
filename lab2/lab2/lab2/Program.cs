@@ -45,9 +45,6 @@ namespace lab2
                 decText[i] = (byte)(Text[i] ^ password[i]);
             }
 
-            Console.Write(Encoding.UTF8.GetString(decText));
-            Console.WriteLine();
-            Console.WriteLine();
         }
     }
 }

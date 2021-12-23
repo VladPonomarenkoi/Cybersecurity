@@ -83,7 +83,7 @@ namespace lab5x4
             var hash = new Stopwatch();
             hash.Start();
 
-            var hashedPassword = PBKDF2.HashPasswordSHA256(Encoding.UTF8.GetBytes(password), PBKDF2.GenerateSalt(), number);
+            var hashedPassword = PBKDF2.HashPasswordSHA384(Encoding.UTF8.GetBytes(password), PBKDF2.GenerateSalt(), number);
 
             hash.Stop();
 
